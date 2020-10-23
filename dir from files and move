@@ -1,0 +1,5 @@
+Get-ChildItem -File |
+  ForEach-Object {
+    $dir = New-item -type Directory -Name $_.Basename
+    $_.Name | Move-Item -Destination $dir
+  }
