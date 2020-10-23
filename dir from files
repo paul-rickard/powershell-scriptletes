@@ -1,0 +1,5 @@
+# Create a folder from every file in DIR
+Get-ChildItem -File |
+	ForEach-Object {
+	  New-item -type Directory -Name $_.Basename
+	}
