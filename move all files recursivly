@@ -1,0 +1,4 @@
+Get-ChildItem -File -Recurse |
+  ForEach-Object {
+    $_ | Move-Item -Destination "./1/"
+  }
